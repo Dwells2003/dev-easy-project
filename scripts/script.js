@@ -2,26 +2,50 @@ $(document).ready(function () {
     console.log("WHATEVER YOU DO, DO NOT HOLD YOUR MOUSE OVER THE BIG SEAL IN THE ABOUT PAGE FOR 10 SECONDS!!!!!");
    });
 
-   function handleMouseOver(imgElement, callback) {
-    let timer;
-//   timer start
-    imgElement.addEventListener("mouseover", function() {
-      timer = setTimeout(callback, 10000);
-      console.log("ITS NOT TOO LATE!! TURN BACK NOW!!!");
-    });
-//  timer stop
-    imgElement.addEventListener("mouseout", function() {
-      clearTimeout(timer);
-      console.log("You are safe!");
-    });
+  // Define an array of objects, where each object represents a person
+const people = [
+  {
+      name: "John Doe",
+      description: "A passionate developer who loves to code."
+  },
+  {
+      name: "Jane Smith",
+      description: "A creative designer who brings ideas to life."
+  },
+  {
+      name: "Michael Brown",
+      description: "A data scientist exploring the world of AI."
   }
+];
+
+// Function to generate and display the cards
+function generateCards(data) {
+  const container = document.getElementById('card-container');
   
-  // Easter egg
-  const myImage = document.getElementById("easterEgg");
+  // Clear the container before adding new cards
+  container.innerHTML = '';
   
-  handleMouseOver(myImage, function() {
-    // Code to execute after 10 seconds of hovering
-    console.log("GET SEALED!!!!!!!!!!!");
-    myImage.src = "images/sealReact.png";
-    
+  data.forEach(person => {
+      const card = document.createElement('div');
+      card.classList.add('card');
+      
+      // Create card content
+      
+      
+      const name = document.createElement('h3');
+      name.textContent = person.name;
+      
+      const description = document.createElement('p');
+      description.textContent = person.description;
+      
+      // Append the content to the card
+      card.appendChild(name);
+      card.appendChild(description);
+      
+      // Append the card to the container
+      container.appendChild(card);
   });
+}
+
+// Generate the cards when the page loads
+generateCards(people);
