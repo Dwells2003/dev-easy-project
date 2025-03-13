@@ -2,3 +2,8 @@ const funFacts = ["My random fact is that I have two brothers",  "My fav color i
 
 funFacts.sort();
 
+
+Flip:
+
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card
+
