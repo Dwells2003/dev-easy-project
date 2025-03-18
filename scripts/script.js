@@ -208,17 +208,27 @@ function createCards(cards) {
 
 // Function to handle like action (move to top)
 function handleLike(event, card) {
+
+  const cardElement = event.target.closest('.card');
+
+
   if (event.target.checked) {
       // Move the liked card to the top
+      cardElement.style.backgroundColor = '#ffcccb';
       const index = cardsData.indexOf(card);
       cardsData.splice(index, 1);  // Remove the card from its current position
       cardsData.unshift(card);     // Add the card to the top
+      const likedCardsContainer = document.getElementById('liked-cards-container');
+      likedCardsContainer.appendChild(cardElement);
 
   } else {
       // Uncheck removes the card from the top, restore original position
+      cardElement.style.backgroundColor = '';
       const index = cardsData.indexOf(card);
       cardsData.splice(index, 1);  // Remove the card
       cardsData.push(card);        // Add the card to the bottom
+      const container = document.getElementById('cards-container');
+      container.appendChild(cardElement);
 
   }
   createCards(cardsData);  // Re-render the cards
@@ -231,7 +241,7 @@ function toggleCardDetails(card) {
   
   if (!detailsDiv) {
       detailsDiv = document.createElement('div');
-      detailsDiv.id = `modal`;
+      detailsDiv.id = 'modal';
       detailsDiv.classList.add('card-details');
       detailsDiv.innerHTML = `
           <h3>Information!</h3>
