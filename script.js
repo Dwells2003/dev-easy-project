@@ -3,115 +3,143 @@ $(document).ready(function () {
    });
 
   // Define an array of objects, where each object represents a person
-const people = [
+const cardsData = [
   {
       name: "Student1",
-      description: "My random fact is that I have two brothers."
+      description: "My random fact is that I have two brothers.",
+      imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
 
   },
   {
       name: "Student2",
-      description: "My fav color is purple."
+      description: "My fav color is purple.",
+      imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+      
   },
   {
       name: "Student3",
-      description: "I like to swim."
+      description: "I like to swim.",
+      imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student4",
-    description: "I broke my finger."
+    description: "I broke my finger.",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student5",
-    description: "My name is Victor, and I'm ambidextrous."
+    description: "My name is Victor, and I'm ambidextrous.",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student6",
-    description: "I can say my alphabet backwards."
+    description: "I can say my alphabet backwards.",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
   name: "Student7",
-  description: "I am not famous."
+  description: "I am not famous.",
+  imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student8",
-    description: "I was born in Louisiana."
+    description: "I was born in Louisiana.",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student9",
-    description: "I have never had a Peanut Butter and Jelly Sandwich!"
+    description: "I have never had a Peanut Butter and Jelly Sandwich!",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student10",
-    description: "I am allergic to cats."
+    description: "I am allergic to cats.",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student11",
-    description: "I like trains."
+    description: "I like trains.",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student12",
-    description: "I know the secret identity of beastcarp1."
+    description: "I know the secret identity of beastcarp1.",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student13",
-    description: "I have a dog."
+    description: "I have a dog.",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student14",
-    description: "I hate UNA parking."
+    description: "I hate UNA parking.",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student15",
-    description: "I have 3 dogs."
+    description: "I have 3 dogs.",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student16",
-    description: "I'm adopted from China :D."
+    description: "I'm adopted from China :D.",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student17",
-    description: "I used to have an orange Hummer H3."
+    description: "I used to have an orange Hummer H3.",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student18",
-    description: "I play on the rugby team."
+    description: "I play on the rugby team.",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student19",
-    description: "UNA basketball sold the bag."
+    description: "UNA basketball sold the bag.",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student20",
-    description: "The Great Wall of China is 13,000 miles long"
+    description: "The Great Wall of China is 13,000 miles long",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student21",
-    description: "I hate javascript."
+    description: "I hate javascript.",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student22",
-    description: "I love the Bible verse Romans 5:8!"
+    description: "I love the Bible verse Romans 5:8!",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student23",
-    description: "I love running."
+    description: "I love running.",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
     name: "Student24",
-    description: "🦭🦭"
+    description: "🦭🦭",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
-  name: "Student25",
-    description: "I have eaten 1 pound of ground beef every day for the last 6 months."
+    name: "Student25",
+    description: "I have eaten 1 pound of ground beef every day for the last 6 months.",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
-  name: "Student26",
-    description: "Still very less parking space in UNA"
+    name: "Student26",
+    description: "Still very less parking space in UNA",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
   {
-  name: "Student27",
-    description: "I enjoy kickboxing"
+    name: "Student27",
+    description: "I enjoy kickboxing",
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
   },
 
 ];
@@ -146,26 +174,11 @@ function generateCards(data) {
 }
 
 // Generate the cards when the page loads
-generateCards(people);
+generateCards(cardData);
 
 // Define objects representing each card
-const cardsData = [
-  {
-      title: "Card 1",
-      description: "This is the first card description.",
-      imageUrl: "https://via.placeholder.com/200x150?text=Image+1"
-  },
-  {
-      title: "Card 3",
-      description: "This is the third card description.",
-      imageUrl: "https://via.placeholder.com/200x150?text=Image+3"
-  },
-  {
-      title: "Card 2",
-      description: "This is the second card description.",
-      imageUrl: "https://via.placeholder.com/200x150?text=Image+2"
-  }
-];
+
+
 
 // Function to create and display cards
 function createCards(cards) {
