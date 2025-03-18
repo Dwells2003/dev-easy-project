@@ -7,6 +7,7 @@ const people = [
   {
       name: "Student1",
       description: "My random fact is that I have two brothers."
+
   },
   {
       name: "Student2",
@@ -146,3 +147,151 @@ function generateCards(data) {
 
 // Generate the cards when the page loads
 generateCards(people);
+
+// Define objects representing each card
+const cardsData = [
+  {
+      title: "Card 1",
+      description: "This is the first card description.",
+      imageUrl: "https://via.placeholder.com/200x150?text=Image+1"
+  },
+  {
+      title: "Card 3",
+      description: "This is the third card description.",
+      imageUrl: "https://via.placeholder.com/200x150?text=Image+3"
+  },
+  {
+      title: "Card 2",
+      description: "This is the second card description.",
+      imageUrl: "https://via.placeholder.com/200x150?text=Image+2"
+  }
+];
+
+// Function to create and display cards
+function createCards(cards) {
+  const container = document.getElementById('cards-container');
+  container.innerHTML = ''; // Clear previous cards
+
+  cards.forEach(card => {
+      // Create card element
+      const cardElement = document.createElement('div');
+      cardElement.classList.add('card');
+
+      // Create image element
+      const cardImage = document.createElement('img');
+      cardImage.src = card.imageUrl;
+
+      // Create card content element
+      const cardContent = document.createElement('div');
+      cardContent.classList.add('card-content');
+
+      // Create title element
+      const cardTitle = document.createElement('div');
+      cardTitle.classList.add('card-title');
+      cardTitle.textContent = card.title;
+
+      // Create description element
+      const cardDescription = document.createElement('div');
+      cardDescription.classList.add('card-description');
+      cardDescription.textContent = card.description;
+
+      // Create checkbox for liking
+      const likeCheckbox = document.createElement('input');
+      likeCheckbox.type = 'checkbox';
+      likeCheckbox.classList.add('like-checkbox');
+      likeCheckbox.addEventListener('change', (event) => handleLike(event, card));
+
+      // Create "View Details" button
+      const viewDetailsButton = document.createElement('button');
+      viewDetailsButton.classList.add('view-details-btn');
+      viewDetailsButton.textContent = 'View Details';
+
+      // Add event listener for button click to show details
+      viewDetailsButton.addEventListener('click', (event) => {
+          event.stopPropagation(); // Prevent card click event
+          toggleCardDetails(card);
+      });
+
+      // Append the content to the card
+      cardContent.appendChild(cardTitle);
+      cardContent.appendChild(cardDescription);
+      cardContent.appendChild(likeCheckbox);
+      cardContent.appendChild(viewDetailsButton);
+      cardElement.appendChild(cardImage);
+      cardElement.appendChild(cardContent);
+
+      // Append the card to the container
+      container.appendChild(cardElement);
+  });
+}
+
+// Function to handle like action (move to top)
+function handleLike(event, card) {
+  if (event.target.checked) {
+      // Move the liked card to the top
+      const index = cardsData.indexOf(card);
+      cardsData.splice(index, 1);  // Remove the card from its current position
+      cardsData.unshift(card);     // Add the card to the top
+  } else {
+      // Uncheck removes the card from the top, restore original position
+      const index = cardsData.indexOf(card);
+      cardsData.splice(index, 1);  // Remove the card
+      cardsData.push(card);        // Add the card to the bottom
+  }
+  createCards(cardsData);  // Re-render the cards
+}
+
+// Function to toggle showing card details
+function toggleCardDetails(card) {
+  // Create a div for the detailed information (if not already present)
+  let detailsDiv = document.getElementById(`details-${card.title}`);
+  
+  if (!detailsDiv) {
+      detailsDiv = document.createElement('div');
+      detailsDiv.id = `details-${card.title}`;
+      detailsDiv.classList.add('card-details');
+      detailsDiv.innerHTML = `
+          <h3>Details for ${card.title}</h3>
+          <p>${card.description}</p>
+          <img src="${card.imageUrl}" alt="${card.title}" style="width: 100%; height: auto;">
+      `;
+      
+      // Insert the details div below the card element
+      const cardElement = document.querySelector(`.card img[src="${card.imageUrl}"]`).closest('.card');
+      cardElement.insertAdjacentElement('afterend', detailsDiv);
+  } else {
+      // If already showing, hide the details
+      detailsDiv.remove();
+  }
+}
+
+// Sort by Title
+function sortByTitle() {
+  const sortedCards = [...cardsData].sort((a, b) => a.title.localeCompare(b.title));
+  createCards(sortedCards);
+}
+
+// Sort by Description
+function sortByDescription() {
+  const sortedCards = [...cardsData].sort((a, b) => a.description.localeCompare(b.description));
+  createCards(sortedCards);
+}
+
+// Random Sort (Shuffle)
+function randomSort() {
+  const shuffledCards = [...cardsData];
+  // Fisher-Yates Shuffle algorithm
+  for (let i = shuffledCards.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledCards[i], shuffledCards[j]] = [shuffledCards[j], shuffledCards[i]]; // Swap elements
+  }
+  createCards(shuffledCards);
+}
+
+// Add event listeners to sort buttons
+document.getElementById('sort-title').addEventListener('click', sortByTitle);
+document.getElementById('sort-description').addEventListener('click', sortByDescription);
+document.getElementById('sort-random').addEventListener('click', randomSort);
+
+// Initial card rendering
+createCards(cardsData);
