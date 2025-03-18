@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    console.log("WHATEVER YOU DO, DO NOT HOLD YOUR MOUSE OVER THE BIG SEAL IN THE ABOUT PAGE FOR 10 SECONDS!!!!!");
+    console.log(Hooray!");
    });
 
   // Define an array of objects, where each object represents a person
