@@ -14,6 +14,7 @@ button {
   border: none;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  
 }
 
 button:hover {
@@ -28,6 +29,7 @@ button:hover {
   justify-content: center;
   margin-top: 20px;
   padding: 20px;
+  
 
 }
 
@@ -38,11 +40,12 @@ button:hover {
   justify-content: center;
   margin-top: 20px;
   padding: 20px;
+  
 }
 
 .card {
   width: 200px;
-  height: 300px;
+  height: 350px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -60,11 +63,16 @@ button:hover {
 
 .card-content {
   padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;     /* Vertically center the items */
   
+
 }
 
 .card-title {
-  font-size: 18px;
+  font-size: 25px;
   font-weight: bold;
   color: #333;
   
@@ -73,15 +81,20 @@ button:hover {
 .card-description {
   font-size: 14px;
   background-color: #ffffff;
+  
 }
+
 
 #modal {
   background-color: #ffffff;
   border-radius: 5px;
 }
+
+
 /* Button to view more details */
 .view-details-btn {
-  margin-top: 10px;
+
+  display: flex;
 
   background-color: #008CBA;
   color: white;
@@ -96,21 +109,48 @@ button:hover {
 
 }
 
+label[for="view-details"] {
+  color: #000; /* Black text */
+  font-weight: bold; /* Bold label */
+  margin-right: 8px; /* Space between label and button */
+}
+
 .like-checkbox {
   margin-top: 10px;
-
+  width: 24px; /* Increase the size of the checkbox */
+  height: 24px;
   background-color: #008CBA;
   color: white;
   border-radius: 5px;
   cursor: pointer;
+  border: 2px solid #000; /* Black border */
+  accent-color: #000; /* Black color for the checkmark */
+  outline: none; /* Remove the default outline */
+  margin-right: 10px; /* Space between checkbox and label */
   transition: background-color 0.3s ease;
   
+}
+
+.like-checkbox:focus {
+  outline: 3px solid #FF0; /* Bright yellow outline when focused for visibility */
+}
+
+.like-checkbox:checked {
+  background-color: #000; /* Black background when checked */
+  border: 2px solid #FFF; /* White border when checked */
+  accent-color: #FFF; /* White color for the checkmark */
 }
 
 .like-checkbox:hover {
   background-color: #4f707a;
 
 }
+
+label[for="like-checkbox"] {
+  color: #000; /* Black text */
+  font-weight: bold; /* Bold label */
+  margin-right: 8px; /* Space between label and button */
+} 
 
 /* Modal Overlay Styling */
 #modal-overlay {
