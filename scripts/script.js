@@ -9,144 +9,172 @@ const cardsData = [
   {
       title: "Student A",
       description: "My random fact is that I have two brothers.",
-      imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+      imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+      imageAlt: "Default Profile Image"
 
   },
   {
       title: "Student B",
       description: "My fav color is purple.",
-      imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+      imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+      imageAlt: "Default Profile Image"
       
   },
   {
       title: "Student C",
       description: "I like to swim.",
-      imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+      imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+      imageAlt: "Default Profile Image"
   },
   {
     title: "Student D",
     description: "I broke my finger.",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student E",
     description: "My name is Victor, and I'm ambidextrous.",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student F",
     description: "I can say my alphabet backwards.",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student G",
   description: "I am not famous.",
-  imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+  imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+  imageAlt: "Default Profile Image"
   },
   {
     title: "Student H",
     description: "I was born in Louisiana.",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student I",
     description: "I have never had a Peanut Butter and Jelly Sandwich!",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student J",
     description: "I am allergic to cats.",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student K",
     description: "I like trains.",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student L",
     description: "I know the secret identity of beastcarp1.",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student M",
     description: "I have a dog.",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student N",
     description: "I hate UNA parking.",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student O",
     description: "I have 3 dogs.",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student P",
     description: "I'm adopted from China :D.",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student Q",
     description: "I used to have an orange Hummer H3.",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student R",
     description: "I play on the rugby team.",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student S",
     description: "UNA basketball sold the bag.",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student T",
     description: "The Great Wall of China is 13,000 miles long",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student U",
     description: "I hate javascript.",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student V",
     description: "I love the Bible verse Romans 5:8!",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student W",
     description: "I love running.",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student X",
     description: "🦭🦭",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student Y",
     description: "I have eaten 1 pound of ground beef every day for the last 6 months.",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student Z",
     description: "Still very less parking space in UNA",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student AA",
     description: "I enjoy kickboxing",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
   {
     title: "Student BB",
     description: "I did not give a fact :[",
-    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125"
+    imageUrl: "https://preview.redd.it/matching-seal-pfps-varying-quality-v0-iod5jfqrw75d1.jpg?width=452&format=pjpg&auto=webp&s=3821ca983d628ccacbb3015ec5b247ee022f5125",
+    imageAlt: "Default Profile Image"
   },
 
 ];
@@ -165,6 +193,7 @@ function createCards(cards) {
       // Create image element
       const cardImage = document.createElement('img');
       cardImage.src = card.imageUrl;
+      cardImage.alt = card.imageAlt;
 
       // Create card content element
       const cardContent = document.createElement('div');
@@ -186,12 +215,12 @@ function createCards(cards) {
       likeCheckbox.textContent = 'Favorite';
       likeCheckbox.classList.add('like-checkbox');
       likeCheckbox.addEventListener('change', (event) => handleLike(event, card));
-      
+  
 
       // Create "View Details" button
       const viewDetailsButton = document.createElement('button');
       viewDetailsButton.classList.add('view-details-btn');
-      viewDetailsButton.textContent = 'View Details';
+      viewDetailsButton.textContent = 'More Info';
 
       // Add event listener for button click to show details
       viewDetailsButton.addEventListener('click', (event) => {
@@ -200,10 +229,14 @@ function createCards(cards) {
       });
 
       // Append the content to the card
-      cardContent.appendChild(cardTitle);
-      cardContent.appendChild(cardDescription);
+      // 
       cardContent.appendChild(likeCheckbox);
       cardContent.appendChild(viewDetailsButton);
+      
+      cardContent.appendChild(cardTitle);
+      cardContent.appendChild(cardDescription);
+      
+    
       cardElement.appendChild(cardImage);
       cardElement.appendChild(cardContent);
 
