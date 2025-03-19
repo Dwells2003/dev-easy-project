@@ -1,4 +1,10 @@
+$(document).ready(function () {
+  console.log("Hello world!");
+ });
+
+
 // Define objects representing each card
+
 const cardsData = [
   {
       title: "Student A",
@@ -236,33 +242,77 @@ function handleLike(event, card) {
 
 // Function to toggle showing card details
 function toggleCardDetails(card) {
-  // Create a div for the detailed information (if not already present)
-  let detailsDiv = document.getElementById(`modal`);
-  
+  // Create or select the modal overlay
+  let overlay = document.getElementById('modal-overlay');
+  if (!overlay) {
+    overlay = document.createElement('div');
+    overlay.id = 'modal-overlay';
+    document.body.appendChild(overlay); // Append the overlay to the body
+  }
+
+  // Create or select the modal content if not already present
+  let detailsDiv = document.getElementById('modal');
   if (!detailsDiv) {
-      detailsDiv = document.createElement('div');
-      detailsDiv.id = 'modal';
-      detailsDiv.classList.add('card-details');
-      detailsDiv.innerHTML = `
-          <h3>Information!</h3>
-          <p>"${card.description}"</p>
-          <p>This was submitted by an anonymous user for</p>
-          <p>CIS-376 Web Development Course. </p>
-          <br>
-          <br>
-          <p>All user data is anonymous, the seals aint no snitch 🦭.</p>
-      `;
-      
-      // Insert the details div below the card element
-      const cardElement = document.querySelector(`.card img[src="${card.imageUrl}"]`).closest('.card');
-      cardElement.insertAdjacentElement('afterend', detailsDiv);
-      
+    detailsDiv = document.createElement('div');
+    detailsDiv.id = 'modal';
+
+    // Modal content
+    detailsDiv.innerHTML = `
+      <h3>Information!</h3>
+      <p>"${card.description}"</p>
+      <p>This was submitted by an anonymous user for</p>
+      <p>CIS-376 Web Development Course.</p>
+      <br><br>
+      <p>All user data is anonymous, the seals aint no snitch 🦭.</p>
+    `;
+
+    // Close button (exit arrow)
+    const closeButton = document.createElement('button');
+    closeButton.classList.add('close-btn');
+    closeButton.innerHTML = '&times;';  // Exit button (× symbol)
+
+    // Close button functionality
+    closeButton.addEventListener('click', function() {
+      detailsDiv.remove();          // Remove the modal
+      overlay.style.display = 'none'; // Hide the overlay when closing the modal
+    });
+
+    detailsDiv.appendChild(closeButton); // Append close button to modal
+
+    // Insert the modal after the card element
+    const cardElement = document.querySelector(`.card img[src="${card.imageUrl}"]`).closest('.card');
+    cardElement.insertAdjacentElement('afterend', detailsDiv);
+    
+    // Show the overlay when the modal is visible
+    overlay.style.display = 'block';
   } else {
-      // If already showing, hide the details
-      detailsDiv.remove();
+    // If already showing, hide the details and overlay
+    detailsDiv.remove();
+    overlay.style.display = 'none';
   }
 }
 
+// Adding event listener for closing the modal when clicking on the overlay
+document.addEventListener('click', function(event) {
+  const modal = document.getElementById('modal');
+  const overlay = document.getElementById('modal-overlay');
+  if (overlay && !modal.contains(event.target) && overlay.style.display === 'block') {
+    modal.remove();
+    overlay.style.display = 'none';
+  }
+});
+
+// Adding Escape key functionality to close the modal
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    const modal = document.getElementById('modal');
+    const overlay = document.getElementById('modal-overlay');
+    if (modal && overlay) {
+      modal.remove();
+      overlay.style.display = 'none';
+    }
+  }
+});
 // Sort by Title
 function sortByTitle() {
   const sortedCards = [...cardsData].sort((a, b) => a.title.localeCompare(b.title));
