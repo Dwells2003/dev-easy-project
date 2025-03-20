@@ -96,7 +96,7 @@ button:hover {
 
   display: flex;
 
-  background-color: #008CBA;
+  background-color: #000000;
   color: white;
   border-radius: 5px;
   cursor: pointer;
@@ -115,42 +115,53 @@ label[for="view-details"] {
   margin-right: 8px; /* Space between label and button */
 }
 
+/* Basic Styles */
 .like-checkbox {
   margin-top: 10px;
-  width: 24px; /* Increase the size of the checkbox */
+  width: 24px; /* Size of the checkbox */
   height: 24px;
-  background-color: #008CBA;
+  background-color: #000000;
   color: white;
   border-radius: 5px;
   cursor: pointer;
-  border: 2px solid #000; /* Black border */
-  accent-color: #000; /* Black color for the checkmark */
-  outline: none; /* Remove the default outline */
-  margin-right: 10px; /* Space between checkbox and label */
+  border: 10px solid #000; /* Black border */
+  accent-color: #000; /* Black checkmark */
+  outline: none; /* Remove default outline */
   transition: background-color 0.3s ease;
-  
 }
 
 .like-checkbox:focus {
-  outline: 3px solid #FF0; /* Bright yellow outline when focused for visibility */
+  outline: 3px solid #FF0; /* Bright yellow outline for visibility */
 }
 
 .like-checkbox:checked {
-  background-color: #000; /* Black background when checked */
+  background-color: #000; /* Black when checked */
   border: 2px solid #FFF; /* White border when checked */
-  accent-color: #FFF; /* White color for the checkmark */
+  accent-color: #FFF; /* White checkmark */
 }
 
 .like-checkbox:hover {
   background-color: #4f707a;
-
 }
 
-label[for="like-checkbox"] {
+/* Label Styles */
+.like-checkbox-label {
   color: #000; /* Black text */
-  font-weight: bold; /* Bold label */
-  margin-right: 8px; /* Space between label and button */
-} 
+  font-weight: bold; /* Bold text for better readability */
+  margin-left: 8px; /* Space between checkbox and label */
+  cursor: pointer;
+  font-size: 16px; /* Appropriate font size */
+  transition: color 0.3s ease;
+}
+
+.like-checkbox-label:hover {
+  color: #008CBA; /* Change label color on hover */
+}
+
+/* Focus Style for the label */
+.like-checkbox:focus + .like-checkbox-label {
+  color: #FF0; /* Yellow color when checkbox is focused */
+}
 
 /* Modal Overlay Styling */
 #modal-overlay {
