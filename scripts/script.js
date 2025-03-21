@@ -215,6 +215,10 @@ function createCards(cards) {
       likeCheckbox.textContent = 'Favorite';
       likeCheckbox.classList.add('like-checkbox');
       likeCheckbox.addEventListener('change', (event) => handleLike(event, card));
+      // Create label for checkbox
+      const likeLabel = document.createElement('label');
+      likeLabel.htmlFor = likeCheckbox.id; // Associate label with checkbox
+      likeLabel.textContent = 'Favorite'; 
   
 
       // Create "View Details" button
@@ -231,6 +235,7 @@ function createCards(cards) {
       // Append the content to the card
       // 
       cardContent.appendChild(likeCheckbox);
+      cardContent.appendChild(likeLabel);
       cardContent.appendChild(viewDetailsButton);
       
       cardContent.appendChild(cardTitle);
