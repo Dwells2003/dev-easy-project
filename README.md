@@ -37,7 +37,28 @@ function createCards(cards) {
       const cardContent = document.createElement('div');
       cardContent.classList.add('card-content');
 ```
+## Dif code
+``` diff JavaScript
+function createCards(cards) {
+  const container = document.getElementById('cards-container');
 
+cheese
+  
+
+  cards.forEach(card => {
+      // Create card element
+      const cardElement = document.createElement('div');
+      cardElement.classList.add('card');
+
+      // Create image element
+      const cardImage = document.createElement('img');
+      cardImage.src = card.imageUrl;
+      cardImage.alt = card.imageAlt;
+
+      // Create card content element
+      const cardContent = document.createElement('div');
+      cardContent.classList.add('card-content');
+```
 
 <details> 
 dev_easy was a fun project we had a group collab on to finish for Web Dev
