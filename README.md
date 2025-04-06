@@ -41,8 +41,8 @@ function createCards(cards) {
 ``` diff JavaScript
 function createCards(cards) {
   const container = document.getElementById('cards-container');
-
-cheese
+-
++ cheese
   
 
   cards.forEach(card => {
